@@ -42,7 +42,8 @@ ${PASSWORD_TEXT}  Inkgrave200
 ${USERNAME_TEXT}  dongdin@mailinator.com
 ${MOBILE_NUMBER}  0403611366
 ${WOMEN_PAGE}  xpath://h2[normalize-space()='Women']
-
+${TOPS_BUTTON}  xpath://div[@id='categories_block_left']//li[1]//span[1]
+${DRESSES_BUTTON}  xpath://div[@class='block_content']//li[@class='last']//span[@class='grower CLOSE']
 
 
 
@@ -139,5 +140,8 @@ Search through Women Products
   Maximize Browser Window
   Click Element  ${WOMEN_PRODUCT}
   Page Should Contain Element  ${WOMEN_PAGE}
+  Click Element  ${TOPS_BUTTON}
+  Click Element  ${DRESSES_BUTTON}
+  Click Element  xpath://*[@id="categories_block_left"]/div/ul/li[1]/ul/li[1]/a
 
 
