@@ -110,6 +110,7 @@ new user can sign in
    Click Element  ${REGISTER_BUTTON}
    Input Text  ${CUSTOMER_PASSWORD}   Inkgrave200
    Click Element  ${REGISTER_BUTTON}
+   Wait Until Element Is Enabled  ${SIGNOUT_BUTTON}  3s
    Click Element  ${SIGNOUT_BUTTON}
 
 
@@ -120,10 +121,14 @@ Enter valid password
   Input Text  ${USER_PASSWORD}  Inkgrave200
 
 I click on the sign in button
+  Wait Until Element Is Enabled  ${USER_SIGNIN}  3s
   Click Element  ${USER_SIGNIN}
 
 Assert successfull login
   Page Should Contain Element  ${ACCOUNT_CREATED}
+
+Search through Women Products
+  Click Element  xpath://a[@title='Women']
 
 
 
