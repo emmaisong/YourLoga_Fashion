@@ -21,6 +21,4 @@ Existing user signs in with valid account credentials
   I click on the sign in button
   Assert successfull login
 
-Customer search Products on Display
-  [Tags]  Products search
-  Search through Women Products
+
