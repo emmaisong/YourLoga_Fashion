@@ -6,6 +6,7 @@ Library  FakerLibrary
 
 *** Variables ***
 ${URL}  http://automationpractice.com/index.php
+${PRODUCT_URL}  http://automationpractice.com/index.php?controller=authentication&back=my-account
 ${BROWSER}   CHROME
 ${SIGNIN_LINK}  xpath://*[@id="header"]/div[2]/div/div/nav/div[1]/a
 ${REGISTRATION_EMAIL_FIELD}  id:email_create
@@ -36,6 +37,8 @@ ${USER_PASSWORD}   xpath://input[@type="password"][@id="passwd"]
 ${USER_SIGNIN}  xpath://span[normalize-space()='Sign in']
 ${ACCOUNT_CREATED}  xpath://i[@class='icon-home']
 ${SIGNOUT_BUTTON}  xpath://a[@title='Log me out']
+${WOMEN_PRODUCT}  xpath://a[@title='Women']
+
 
 
 
@@ -128,7 +131,7 @@ Assert successfull login
   Page Should Contain Element  ${ACCOUNT_CREATED}
 
 Search through Women Products
-  Click Element  xpath://a[@title='Women']
-
+  Open Browser  ${PRODUCT_URL}  ${BROWSER}
+  Click Element  ${WOMEN_PRODUCT}
 
 
