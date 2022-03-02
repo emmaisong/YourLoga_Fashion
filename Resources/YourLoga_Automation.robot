@@ -132,6 +132,7 @@ Assert successfull login
 
 Search through Women Products
   Open Browser  ${PRODUCT_URL}  ${BROWSER}
+  Maximize Browser Window
   Click Element  ${WOMEN_PRODUCT}
 
 
