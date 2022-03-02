@@ -41,6 +41,7 @@ ${WOMEN_PRODUCT}  xpath://a[@title='Women']
 ${PASSWORD_TEXT}  Inkgrave200
 ${USERNAME_TEXT}  dongdin@mailinator.com
 ${MOBILE_NUMBER}  0403611366
+${WOMEN_PAGE}  xpath://h2[normalize-space()='Women']
 
 
 
@@ -137,5 +138,6 @@ Search through Women Products
   Open Browser  ${PRODUCT_URL}  ${BROWSER}
   Maximize Browser Window
   Click Element  ${WOMEN_PRODUCT}
+  Page Should Contain Element  ${WOMEN_PAGE}
 
 

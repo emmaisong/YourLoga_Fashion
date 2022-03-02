@@ -1,75 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220302 19:17:44.933" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220302 20:49:54.971" rpa="false" schemaversion="2">
 <suite id="s1" name="Products Search" source="C:\Users\emmab\PycharmProjects\YourLoga_Fashion\Tests\Products_Search.robot">
 <kw name="Set Log Level" library="BuiltIn" type="SETUP">
 <arg>DEBUG</arg>
 <doc>Sets the log threshold to the specified level and returns the old level.</doc>
-<msg timestamp="20220302 19:17:45.333" level="INFO">Log level changed from INFO to DEBUG.</msg>
-<status status="PASS" starttime="20220302 19:17:45.333" endtime="20220302 19:17:45.333"/>
+<msg timestamp="20220302 20:49:55.368" level="INFO">Log level changed from INFO to DEBUG.</msg>
+<status status="PASS" starttime="20220302 20:49:55.368" endtime="20220302 20:49:55.368"/>
 </kw>
 <test id="s1-t1" name="Customer search Products on Display">
 <kw name="Set Selenium Speed" library="SeleniumLibrary" type="SETUP">
 <arg>0.01</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220302 19:17:45.334" endtime="20220302 19:17:45.334"/>
+<status status="PASS" starttime="20220302 20:49:55.369" endtime="20220302 20:49:55.369"/>
 </kw>
 <kw name="Search through Women Products" library="YourLoga_Automation">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${PRODUCT_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220302 19:17:45.335" level="INFO">Opening browser 'CHROME' to base url 'http://automationpractice.com/index.php?controller=authentication&amp;back=my-account'.</msg>
-<msg timestamp="20220302 19:17:45.899" level="DEBUG">POST http://localhost:57738/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}</msg>
-<msg timestamp="20220302 19:17:45.900" level="DEBUG">Starting new HTTP connection (1): localhost:57738</msg>
-<msg timestamp="20220302 19:17:46.460" level="DEBUG">http://localhost:57738 "POST /session HTTP/1.1" 200 789</msg>
-<msg timestamp="20220302 19:17:46.461" level="DEBUG">Finished Request</msg>
-<msg timestamp="20220302 19:17:46.461" level="DEBUG">POST http://localhost:57738/session/4447823ac3575a8b552254f77b61b2a9/timeouts {"script": 5000}</msg>
-<msg timestamp="20220302 19:17:46.463" level="DEBUG">http://localhost:57738 "POST /session/4447823ac3575a8b552254f77b61b2a9/timeouts HTTP/1.1" 200 14</msg>
-<msg timestamp="20220302 19:17:46.464" level="DEBUG">Finished Request</msg>
-<msg timestamp="20220302 19:17:46.464" level="DEBUG">POST http://localhost:57738/session/4447823ac3575a8b552254f77b61b2a9/timeouts {"implicit": 0}</msg>
-<msg timestamp="20220302 19:17:46.466" level="DEBUG">http://localhost:57738 "POST /session/4447823ac3575a8b552254f77b61b2a9/timeouts HTTP/1.1" 200 14</msg>
-<msg timestamp="20220302 19:17:46.466" level="DEBUG">Finished Request</msg>
-<msg timestamp="20220302 19:17:46.466" level="DEBUG">POST http://localhost:57738/session/4447823ac3575a8b552254f77b61b2a9/url {"url": "http://automationpractice.com/index.php?controller=authentication&amp;back=my-account"}</msg>
-<msg timestamp="20220302 19:17:49.827" level="DEBUG">http://localhost:57738 "POST /session/4447823ac3575a8b552254f77b61b2a9/url HTTP/1.1" 200 14</msg>
-<msg timestamp="20220302 19:17:49.828" level="DEBUG">Finished Request</msg>
-<msg timestamp="20220302 19:17:49.839" level="DEBUG">Opened browser with session id 4447823ac3575a8b552254f77b61b2a9.</msg>
-<status status="PASS" starttime="20220302 19:17:45.335" endtime="20220302 19:17:49.839"/>
+<msg timestamp="20220302 20:49:55.369" level="INFO">Opening browser 'CHROME' to base url 'http://automationpractice.com/index.php?controller=authentication&amp;back=my-account'.</msg>
+<msg timestamp="20220302 20:49:55.913" level="DEBUG">POST http://localhost:62471/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}, "desiredCapabilities": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:chromeOptions": {"extensions": [], "args": []}}}</msg>
+<msg timestamp="20220302 20:49:55.914" level="DEBUG">Starting new HTTP connection (1): localhost:62471</msg>
+<msg timestamp="20220302 20:49:56.447" level="DEBUG">http://localhost:62471 "POST /session HTTP/1.1" 200 787</msg>
+<msg timestamp="20220302 20:49:56.448" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220302 20:49:56.448" level="DEBUG">POST http://localhost:62471/session/35918808a41334d3cb803ee19dbe5dcb/timeouts {"script": 5000}</msg>
+<msg timestamp="20220302 20:49:56.449" level="DEBUG">http://localhost:62471 "POST /session/35918808a41334d3cb803ee19dbe5dcb/timeouts HTTP/1.1" 200 14</msg>
+<msg timestamp="20220302 20:49:56.450" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220302 20:49:56.450" level="DEBUG">POST http://localhost:62471/session/35918808a41334d3cb803ee19dbe5dcb/timeouts {"implicit": 0}</msg>
+<msg timestamp="20220302 20:49:56.451" level="DEBUG">http://localhost:62471 "POST /session/35918808a41334d3cb803ee19dbe5dcb/timeouts HTTP/1.1" 200 14</msg>
+<msg timestamp="20220302 20:49:56.451" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220302 20:49:56.451" level="DEBUG">POST http://localhost:62471/session/35918808a41334d3cb803ee19dbe5dcb/url {"url": "http://automationpractice.com/index.php?controller=authentication&amp;back=my-account"}</msg>
+<msg timestamp="20220302 20:49:58.888" level="DEBUG">http://localhost:62471 "POST /session/35918808a41334d3cb803ee19dbe5dcb/url HTTP/1.1" 200 14</msg>
+<msg timestamp="20220302 20:49:58.889" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220302 20:49:58.911" level="DEBUG">Opened browser with session id 35918808a41334d3cb803ee19dbe5dcb.</msg>
+<status status="PASS" starttime="20220302 20:49:55.369" endtime="20220302 20:49:58.911"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<msg timestamp="20220302 19:17:49.839" level="DEBUG">POST http://localhost:57738/session/4447823ac3575a8b552254f77b61b2a9/window/maximize {}</msg>
-<msg timestamp="20220302 19:17:49.983" level="DEBUG">http://localhost:57738 "POST /session/4447823ac3575a8b552254f77b61b2a9/window/maximize HTTP/1.1" 200 51</msg>
-<msg timestamp="20220302 19:17:49.983" level="DEBUG">Finished Request</msg>
-<status status="PASS" starttime="20220302 19:17:49.839" endtime="20220302 19:17:49.994"/>
+<msg timestamp="20220302 20:49:58.911" level="DEBUG">POST http://localhost:62471/session/35918808a41334d3cb803ee19dbe5dcb/window/maximize {}</msg>
+<msg timestamp="20220302 20:49:59.036" level="DEBUG">http://localhost:62471 "POST /session/35918808a41334d3cb803ee19dbe5dcb/window/maximize HTTP/1.1" 200 51</msg>
+<msg timestamp="20220302 20:49:59.037" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20220302 20:49:58.911" endtime="20220302 20:49:59.049"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${WOMEN_PRODUCT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220302 19:17:49.995" level="INFO">Clicking element 'xpath://a[@title='Women']'.</msg>
-<msg timestamp="20220302 19:17:49.996" level="DEBUG">POST http://localhost:57738/session/4447823ac3575a8b552254f77b61b2a9/elements {"using": "xpath", "value": "//a[@title='Women']"}</msg>
-<msg timestamp="20220302 19:17:50.018" level="DEBUG">http://localhost:57738 "POST /session/4447823ac3575a8b552254f77b61b2a9/elements HTTP/1.1" 200 90</msg>
-<msg timestamp="20220302 19:17:50.019" level="DEBUG">Finished Request</msg>
-<msg timestamp="20220302 19:17:50.041" level="DEBUG">POST http://localhost:57738/session/4447823ac3575a8b552254f77b61b2a9/element/7e7733d3-25c7-452f-8648-a3b5196661ee/click {"id": "7e7733d3-25c7-452f-8648-a3b5196661ee"}</msg>
-<msg timestamp="20220302 19:17:52.492" level="DEBUG">http://localhost:57738 "POST /session/4447823ac3575a8b552254f77b61b2a9/element/7e7733d3-25c7-452f-8648-a3b5196661ee/click HTTP/1.1" 200 14</msg>
-<msg timestamp="20220302 19:17:52.492" level="DEBUG">Finished Request</msg>
-<status status="PASS" starttime="20220302 19:17:49.994" endtime="20220302 19:17:52.517"/>
+<msg timestamp="20220302 20:49:59.050" level="INFO">Clicking element 'xpath://a[@title='Women']'.</msg>
+<msg timestamp="20220302 20:49:59.050" level="DEBUG">POST http://localhost:62471/session/35918808a41334d3cb803ee19dbe5dcb/elements {"using": "xpath", "value": "//a[@title='Women']"}</msg>
+<msg timestamp="20220302 20:49:59.062" level="DEBUG">http://localhost:62471 "POST /session/35918808a41334d3cb803ee19dbe5dcb/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20220302 20:49:59.063" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220302 20:49:59.079" level="DEBUG">POST http://localhost:62471/session/35918808a41334d3cb803ee19dbe5dcb/element/7e654cf7-b4f5-4053-bd1a-c1e17671d808/click {"id": "7e654cf7-b4f5-4053-bd1a-c1e17671d808"}</msg>
+<msg timestamp="20220302 20:50:01.220" level="DEBUG">http://localhost:62471 "POST /session/35918808a41334d3cb803ee19dbe5dcb/element/7e654cf7-b4f5-4053-bd1a-c1e17671d808/click HTTP/1.1" 200 14</msg>
+<msg timestamp="20220302 20:50:01.221" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20220302 20:49:59.049" endtime="20220302 20:50:01.236"/>
 </kw>
-<status status="PASS" starttime="20220302 19:17:45.335" endtime="20220302 19:17:52.517"/>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${WOMEN_PAGE}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220302 20:50:01.237" level="DEBUG">POST http://localhost:62471/session/35918808a41334d3cb803ee19dbe5dcb/elements {"using": "xpath", "value": "//h2[normalize-space()='Women']"}</msg>
+<msg timestamp="20220302 20:50:01.246" level="DEBUG">http://localhost:62471 "POST /session/35918808a41334d3cb803ee19dbe5dcb/elements HTTP/1.1" 200 90</msg>
+<msg timestamp="20220302 20:50:01.246" level="DEBUG">Finished Request</msg>
+<msg timestamp="20220302 20:50:01.266" level="INFO">Current page contains element 'xpath://h2[normalize-space()='Women']'.</msg>
+<status status="PASS" starttime="20220302 20:50:01.236" endtime="20220302 20:50:01.266"/>
+</kw>
+<status status="PASS" starttime="20220302 20:49:55.369" endtime="20220302 20:50:01.266"/>
 </kw>
 <tag>Product Search</tag>
-<status status="PASS" starttime="20220302 19:17:45.333" endtime="20220302 19:17:52.518"/>
+<status status="PASS" starttime="20220302 20:49:55.368" endtime="20220302 20:50:01.267"/>
 </test>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<msg timestamp="20220302 19:17:52.521" level="DEBUG">Closing all browsers.</msg>
-<msg timestamp="20220302 19:17:52.522" level="DEBUG">DELETE http://localhost:57738/session/4447823ac3575a8b552254f77b61b2a9 {}</msg>
-<msg timestamp="20220302 19:17:52.611" level="DEBUG">http://localhost:57738 "DELETE /session/4447823ac3575a8b552254f77b61b2a9 HTTP/1.1" 200 14</msg>
-<msg timestamp="20220302 19:17:52.612" level="DEBUG">Finished Request</msg>
-<status status="PASS" starttime="20220302 19:17:52.521" endtime="20220302 19:17:54.687"/>
+<msg timestamp="20220302 20:50:01.269" level="DEBUG">Closing all browsers.</msg>
+<msg timestamp="20220302 20:50:01.269" level="DEBUG">DELETE http://localhost:62471/session/35918808a41334d3cb803ee19dbe5dcb {}</msg>
+<msg timestamp="20220302 20:50:01.334" level="DEBUG">http://localhost:62471 "DELETE /session/35918808a41334d3cb803ee19dbe5dcb HTTP/1.1" 200 14</msg>
+<msg timestamp="20220302 20:50:01.335" level="DEBUG">Finished Request</msg>
+<status status="PASS" starttime="20220302 20:50:01.269" endtime="20220302 20:50:03.391"/>
 </kw>
 <doc>Smoke testing to validate the usage of robot framework as automation platform
 test environment http://automationpractice.com/index.php</doc>
-<status status="PASS" starttime="20220302 19:17:44.934" endtime="20220302 19:17:54.688"/>
+<status status="PASS" starttime="20220302 20:49:54.973" endtime="20220302 20:50:03.391"/>
 </suite>
 <statistics>
 <total>
