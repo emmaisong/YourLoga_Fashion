@@ -36,6 +36,9 @@ ${USER_PASSWORD}   xpath://input[@type="password"][@id="passwd"]
 ${USER_SIGNIN}  xpath://span[normalize-space()='Sign in']
 ${ACCOUNT_CREATED}  xpath://i[@class='icon-home']
 ${SIGNOUT_BUTTON}  xpath://a[@title='Log me out']
+${PASSWORD_TEXT}  Inkgrave200
+${MOBILE_NUMBER}  0403611366
+${USERNAME_TEXT}  dongdin@mailinator.com
 
 
 
@@ -67,7 +70,7 @@ validate successful account creation
    Log    ${Last name}
    Set Test Variable  ${Last name}
    Input Text  ${CUSTOMER_LASTNAME}    ${Last name}
-   Input Text  ${CUSTOMER_PASSWORD}   Inkgrave200
+   Input Text  ${CUSTOMER_PASSWORD}   ${PASSWORD_TEXT}
 
    Select From List By Index  ${BIRTH_DAY}   2
    Select From List By Index  ${BIRTH_MONTH}  5
@@ -99,7 +102,7 @@ validate successful account creation
    Set Test Variable  ${Port Number}
    Input Text  ${ZIP_CODE}    ${Port Number}
    Input Text  ${ADDITIONAL_INFORMATION}    ${ADDITIONAL_TEXT}
-   Input Text  ${MOBILE_PHONE}   0403611366
+   Input Text  ${MOBILE_PHONE}   ${MOBILE_NUMBER}
 
   ${Name}=  FakerLibrary.Name
    Log    ${Name}
@@ -108,16 +111,16 @@ validate successful account creation
 
 new user can sign in
    Click Element  ${REGISTER_BUTTON}
-   Input Text  ${CUSTOMER_PASSWORD}   Inkgrave200
+   Input Text  ${CUSTOMER_PASSWORD}   ${PASSWORD_TEXT}
    Click Element  ${REGISTER_BUTTON}
    Click Element  ${SIGNOUT_BUTTON}
 
 
 Enter valid username
-  Input Text  ${USER_NAME}  dongdin@mailinator.com
+  Input Text  ${USER_NAME}  ${USERNAME_TEXT}
 
 Enter valid password
-  Input Text  ${USER_PASSWORD}  Inkgrave200
+  Input Text  ${USER_PASSWORD}  ${PASSWORD_TEXT}
 
 I click on the sign in button
   Click Element  ${USER_SIGNIN}
