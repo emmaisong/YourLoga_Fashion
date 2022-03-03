@@ -136,8 +136,11 @@ Assert successfull login
   Page Should Contain Element  ${ACCOUNT_CREATED}
 
 Search through Women Products
-  Open Browser  ${PRODUCT_URL}  ${BROWSER}
+  Open Browser  ${URL}  ${BROWSER}
+  Click Element  ${SIGNIN_LINK}
   Maximize Browser Window
+  Input Text  ${USER_NAME}  ${USERNAME_TEXT}
+  Input Text  ${USER_PASSWORD}  ${PASSWORD_TEXT}
   Click Element  ${WOMEN_PRODUCT}
   Page Should Contain Element  ${WOMEN_PAGE}
   Click Element  ${TOPS_BUTTON}
