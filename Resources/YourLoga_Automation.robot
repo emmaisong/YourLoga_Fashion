@@ -6,6 +6,7 @@ Library  FakerLibrary
 
 *** Variables ***
 ${URL}  http://automationpractice.com/index.php
+${PRODUCT_URL}  http://automationpractice.com/index.php?controller=authentication&back=my-account
 ${BROWSER}   CHROME
 ${SIGNIN_LINK}  xpath://*[@id="header"]/div[2]/div/div/nav/div[1]/a
 ${REGISTRATION_EMAIL_FIELD}  id:email_create
@@ -36,10 +37,18 @@ ${USER_PASSWORD}   xpath://input[@type="password"][@id="passwd"]
 ${USER_SIGNIN}  xpath://span[normalize-space()='Sign in']
 ${ACCOUNT_CREATED}  xpath://i[@class='icon-home']
 ${SIGNOUT_BUTTON}  xpath://a[@title='Log me out']
+${WOMEN_PRODUCT}  xpath://a[@title='Women']
 ${PASSWORD_TEXT}  Inkgrave200
-${MOBILE_NUMBER}  0403611366
 ${USERNAME_TEXT}  dongdin@mailinator.com
-
+${MOBILE_NUMBER}  0403611366
+${WOMEN_PAGE}  xpath://h2[normalize-space()='Women']
+${TOPS_BUTTON}  xpath://div[@id='categories_block_left']//li[1]//span[1]
+${DRESSES_BUTTON}  xpath://div[@class='block_content']//li[@class='last']//span[@class='grower CLOSE']
+${T-SHIRT_BUTTON}  xpath://*[@id="categories_block_left"]/div/ul/li[1]/ul/li[1]/a
+${SMALL_SIZE}  name:layered_id_attribute_group_1
+${MEDIUM_SIZE}  id:layered_id_attribute_group_2
+${LARGE_SIZE}  id:layered_id_attribute_group_3
+${CATALOG}  xpath://*[@id="layered_block_left"]/p
 
 
 *** Keywords ***
@@ -113,6 +122,7 @@ new user can sign in
    Click Element  ${REGISTER_BUTTON}
    Input Text  ${CUSTOMER_PASSWORD}   ${PASSWORD_TEXT}
    Click Element  ${REGISTER_BUTTON}
+   Wait Until Element Is Enabled  ${SIGNOUT_BUTTON}  3s
    Click Element  ${SIGNOUT_BUTTON}
 
 
@@ -123,10 +133,29 @@ Enter valid password
   Input Text  ${USER_PASSWORD}  ${PASSWORD_TEXT}
 
 I click on the sign in button
+  Wait Until Element Is Enabled  ${USER_SIGNIN}  3s
   Click Element  ${USER_SIGNIN}
 
 Assert successfull login
   Page Should Contain Element  ${ACCOUNT_CREATED}
 
+Search through Women Products
+  Open Browser  ${URL}  ${BROWSER}
+  Click Element  ${SIGNIN_LINK}
+  Maximize Browser Window
+  Input Text  ${USER_NAME}  ${USERNAME_TEXT}
+  Input Text  ${USER_PASSWORD}  ${PASSWORD_TEXT}
+  Click Element  ${WOMEN_PRODUCT}
+  Page Should Contain Element  ${WOMEN_PAGE}
+  Click Element  ${TOPS_BUTTON}
+  Click Element  ${DRESSES_BUTTON}
+  Click Element  ${T-SHIRT_BUTTON}
+  Page Should Contain Element  ${CATALOG}
+  Select Checkbox  ${SMALL_SIZE}
+  Unselect Checkbox  ${SMALL_SIZE}
+  Select Checkbox  ${MEDIUM_SIZE}
+  Unselect Checkbox  ${MEDIUM_SIZE}
+  Select Checkbox  ${LARGE_SIZE}
+  Unselect Checkbox  ${LARGE_SIZE}
 
 
