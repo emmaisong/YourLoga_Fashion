@@ -44,7 +44,11 @@ ${MOBILE_NUMBER}  0403611366
 ${WOMEN_PAGE}  xpath://h2[normalize-space()='Women']
 ${TOPS_BUTTON}  xpath://div[@id='categories_block_left']//li[1]//span[1]
 ${DRESSES_BUTTON}  xpath://div[@class='block_content']//li[@class='last']//span[@class='grower CLOSE']
-
+${T-SHIRT_BUTTON}  xpath://*[@id="categories_block_left"]/div/ul/li[1]/ul/li[1]/a
+${SMALL_SIZE}  name:layered_id_attribute_group_1
+${MEDIUM_SIZE}  id:layered_id_attribute_group_2
+${LARGE_SIZE}  id:layered_id_attribute_group_3
+${CATALOG}  xpath://*[@id="layered_block_left"]/p
 
 
 *** Keywords ***
@@ -145,6 +149,13 @@ Search through Women Products
   Page Should Contain Element  ${WOMEN_PAGE}
   Click Element  ${TOPS_BUTTON}
   Click Element  ${DRESSES_BUTTON}
-  Click Element  xpath://*[@id="categories_block_left"]/div/ul/li[1]/ul/li[1]/a
+  Click Element  ${T-SHIRT_BUTTON}
+  Page Should Contain Element  ${CATALOG}
+  Select Checkbox  ${SMALL_SIZE}
+  Unselect Checkbox  ${SMALL_SIZE}
+  Select Checkbox  ${MEDIUM_SIZE}
+  Unselect Checkbox  ${MEDIUM_SIZE}
+  Select Checkbox  ${LARGE_SIZE}
+  Unselect Checkbox  ${LARGE_SIZE}
 
 
